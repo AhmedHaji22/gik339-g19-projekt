@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon"
+        href="#" />
+  <title>Bilar AB</title>
+</head>
+
+<body class="min-h-[100vh] bg-gradient-to-b from-slate-800 to-slate-700 text-white">
+  <header class="mt-10 text-center">
+    <h1 class="text-3xl">Lagra dina favoritbilar</h1>
+  </header>
+  <main class="mt-10">
+    <div class="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto mt-8 bg-white/25 p-3 rounded-lg">
+      <form id="userForm">
+        <div class="form-controls my-4 mx-auto flex m:w-3/4 items-center ">
+          <label for="model"
+                 class="mr-4 text-xl w-40">Bilmärke</label>
+          <input id="model"
+                 class="text-slate-800 p-1 flex-1 rounded-md"
+                 type="text"
+                 name="model" />
+        </div>
+        <div class="form-controls my-4 mx-auto flex m:w-3/4 items-center">
+          <label for="mileage"
+                 class="mr-4 text-xl w-40">Mätare</label>
+          <input id="mileage"
+                 class="text-slate-800 p-1 flex-1 rounded-md"
+                 type="number"
+                 name="mileage" />
+        </div>
+        <div class="form-controls my-4 mx-auto flex m:w-3/4 items-center">
+          <label for="fuel"
+                 class="mr-4 text-xl w-40">Drivmedel</label>
+          <input id="fuel"
+                 class="text-slate-800 p-1 flex-1 rounded-md"
+                 type="text"
+                 name="fuel" />
+        </div>
+
+        <div class="form-controls my-4 mx-auto flex m:w-3/4 items-center">
+          <label for="year"
+                 class="mr-4 text-xl w-40">Årsmodell</label>
+          <input id="year"
+                 class="text-slate-800 p-1 flex-1 rounded-md"
+                 type="number"
+                 name="year" />
+        </div>
+        <div class="form-controls my-4 mx-auto flex m:w-3/4 items-center">
+          <label for="transmission"
+                 class="mr-4 text-xl w-40">Växellåda</label>
+          <input id="transmission"
+                 class="text-slate-800 p-1 flex-1 rounded-md"
+                 type="text"
+                 name="transmission" />
+        </div>
+
+        <div class="form-controls my-4 mx-auto flex m:w-3/4 items-center">
+          <label for="color"
+                 class="mr-4 text-xl w-40">Färg</label>
+          <select id="color"
+                  class="bg-white text-slate-800 p-1 flex-1 rounded-md"
+                  name="color">
+            <option value="purple">Lila</option>
+            <option value="green">Grön</option>
+            <option value="gray">Grå</option>
+            <option value="red">Röd</option>
+            <option value="yellow">Gul</option>
+          </select>
+        </div>
+        <div class="modal fade"
+             id="exampleModal"
+             tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-black"></h1>
+              </div>
+              <div class="modal-body">
+                <h1 class="modal-grejen fs-5 text-black"></h1>
+              </div>
+              <div class="modal-footer">
+                <button type="button"
+                        class="px-4 py-2 text-gray-500 border border-gray-500 rounded-md hover:bg-gray-200 hover:text-black"
+                        data-bs-dismiss="modal">
+                  Stäng
+                </button>
+                <button type="submit"
+                        class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700">Skicka</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div
+             class="form-controls my-4 flex flex-col md:flex-row w-full md:w-4/5 items-center justify-center md:justify-end gap-4 md:ml-0  ">
+          <button class="px-4 py-1 bg-slate-200 text-slate-800 rounded-md hover:bg-slate-300"
+                  type="reset"
+                  name="clearUserForm"
+                  id="clearButton">
+            Rensa
+          </button>
+          <button class="px-4 py-1 bg-slate-200 text-slate-800 rounded-md hover:bg-slate-300"
+                  type="button"
+                  name="submitUserForm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">
+            Skicka
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="listContainer"
+         class=""></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
