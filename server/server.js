@@ -103,7 +103,6 @@ server.put("/users", (req, res) => {
       res.send("Användaren uppdaterades");
     }
   });
-  //UPDATE users SET firstName="Mikaela",lastName="Hedberg" WHERE id=1
 });
 
 server.delete("/users/:id", (req, res) => {
